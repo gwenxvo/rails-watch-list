@@ -1,0 +1,14 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 500px;
+  text-align: center;
+
+  h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: $light-gray
+  }
+}
