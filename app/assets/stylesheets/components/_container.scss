@@ -76,3 +76,27 @@
 .fa-clapperboard {
   font-size: 35px;
 }
+
+.container-review {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px 0px;
+}
+
+.container-add-review {
+  background-color: white;
+  padding: 30px 50px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.container-all-reviews {
+  padding: 30px 50px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  .review {
+    border-bottom: 1px solid rgb(194, 190, 190);
+    margin-top: 10px;
+  }
+}

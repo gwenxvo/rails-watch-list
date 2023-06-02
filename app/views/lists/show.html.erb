@@ -49,5 +49,30 @@
         <%= f.submit class: "btn btn-success" %>
         <% end %>
       </div>
+
+
+      <div class="container-review">
+        <div class="container-all-reviews">
+          <h3>Reviews</h3>
+            <% @list.reviews.each do |review| %>
+              <div class='review'>
+                <p><%= review.rating %></p>
+                <p><%= review.comment %></p>
+              </div>
+            <% end %>
+        </div>
+
+        <div class="container-add-review">
+          <h3>Add Your Review</h3>
+          <%= simple_form_for([@list, @review]) do |f| %>
+              <%= f.input :comment %>
+              <%= f.input :rating, collection: (1..5).to_a, input_html: {data: {controller: "star-rating"}} %>
+              <%= f.submit class: "btn btn-success" %>
+          <% end %>
+        </div>
+
+      </div>
+
+
   </ul>
 </div>
