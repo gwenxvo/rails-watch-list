@@ -14,7 +14,7 @@
       <div class="container-lists">
         <% @lists.each do |item| %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= item.url %>;')">
-            <li><%= link_to item.name, list_path(item), class: "title-none" %>
+            <div class='card-position'><li><%= link_to item.name, list_path(item), class: "title-none" %></div>
               <%= link_to "x",
               list_path(item),
               data: {turbo_method: :delete, turbo_confirm: "Do you really want to remove this list?"}, class: "delete-index"
