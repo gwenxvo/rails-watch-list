@@ -56,7 +56,9 @@
           <h3>Reviews</h3>
             <% @list.reviews.each do |review| %>
               <div class='review'>
-                <p><%= review.rating %></p>
+                <% review.rating.times do |star| %>
+                  <i class="fa-solid fa-star"></i>
+                <% end %>
                 <p><%= review.comment %></p>
               </div>
             <% end %>
