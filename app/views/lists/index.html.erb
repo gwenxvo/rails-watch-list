@@ -13,8 +13,13 @@
     <ul class='list-none'>
       <div class="container-lists">
         <% @lists.each do |item| %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= item.url %>;')">
             <li><%= link_to item.name, list_path(item), class: "title-none" %>
+              <%= link_to "x",
+              list_path(item),
+              data: {turbo_method: :delete, turbo_confirm: "Do you really want to remove this list?"}, class: "delete-index"
+              %>
+
           </div>
           </li>
         <% end %>

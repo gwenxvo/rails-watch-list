@@ -50,6 +50,16 @@
   }
 }
 
+
+
+.delete-index {
+  text-decoration: none;
+  position: relative;
+  top: -87px;
+  right: -129px;
+  color: $light-gray;
+}
+
 .container-bookmark {
   width: 100%;
   background-color: white;
@@ -60,4 +70,8 @@
 
 .container-movie-card {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.fa-clapperboard {
+  font-size: 35px;
 }

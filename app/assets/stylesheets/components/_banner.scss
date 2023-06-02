@@ -2,8 +2,11 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
   text-align: center;
+  justify-content: center;
 
   h1 {
     font-size: 45px;
